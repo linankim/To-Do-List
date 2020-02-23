@@ -1,0 +1,23 @@
+body {
+  font-family: "Nanum Myeongjo";
+}
+h3 {
+  font-size: 80px;
+}
+
+form {
+  text-align: center;
+}
+
+input {
+  height: 30px;
+  width: 150px;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Nanum Myeongjo";
+}
+
+.container {
+  text-align: center;
+  margin: 10% 25% 1% 25%;
+}
