@@ -8,6 +8,7 @@ function addTodo(text) {
   };
 
   todoItems.push(todo);
+  console.log(todoItems);
 
   const list = document.querySelector(".js-todo-list");
   list.insertAdjacentHTML(
@@ -24,6 +25,19 @@ function addTodo(text) {
   `
   );
 }
+
+const form = document.querySelector(".js-form");
+form.addEventListener("submit", event => {
+  event.preventDefault();
+  const input = document.querySelector(".js-todo-input");
+
+  const text = input.value;
+  if (text !== "") {
+    addTodo(text);
+    input.value = "";
+    input.focus();
+  }
+});
 
 function toggleDone(key) {
   const index = todoItems.findIndex(item => item.id === Number(key));
@@ -45,19 +59,6 @@ function deleteTodo(key) {
   const list = document.querySelector(".js-todo-list");
   if (todoItems.length === 0) list.innerHTML = "";
 }
-
-const form = document.querySelector(".js-form");
-form.addEventListener("submit", event => {
-  event.preventDefault();
-  const input = document.querySelector(".js-todo-input");
-
-  const text = input.value.trim();
-  if (text !== "") {
-    addTodo(text);
-    input.value = "";
-    input.focus();
-  }
-});
 
 const list = document.querySelector(".js-todo-list");
 list.addEventListener("click", event => {
