@@ -21,3 +21,16 @@ input {
   text-align: center;
   margin: 10% 25% 1% 25%;
 }
+
+button {
+  height: 35.98px;
+  width: 30px;
+  padding: 1px;
+  text-align: center;
+  font-family: "Nanum Myeongjo";
+}
+
+.block {
+  display: inline;
+  vertical-align: middle;
+}
